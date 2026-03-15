@@ -15,7 +15,7 @@ export default function profile() {
         contentContainerClassName='pb-32 px-7'
       >
         <View className='flex flex-row items-center justify-between mt-5'>
-          <Text className='text-xl font-rubik-bold'>pr</Text>
+          <Text className='text-xl font-rubik-bold'>profile</Text>
           <Image source={icons.bell} className='size-5' />
         </View>
 
