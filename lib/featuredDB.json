@@ -1,0 +1,75 @@
+[
+  {
+    "id": 1,
+    "title": "Modernica Apartment",
+    "type": "apartment",
+    "rating": 4.8,
+    "reviews": 1275,
+    "price": 2500,
+    "address": "22 W 15th, New York, NY 10011",
+    "beds": 8,
+    "bath": 3,
+    "sqft": 2000,
+    "overview": "Sleek modern apartment with open living space and city views.",
+    "image": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=60&w=640&auto=format&fit=crop",
+    "gallery": [
+      "https://images.unsplash.com/photo-1507089947368-19c1da9775ae?q=60&w=640&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1638799869566-b17fa794c4de?q=60&w=640&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1560185009-dddeb820c7b7?q=60&w=640&auto=format&fit=crop"
+    ],
+    "agent": {
+      "name": "Natasya Wilodra",
+      "role": "Owner",
+      "avatar": "https://images.unsplash.com/photo-1691335053879-02096d6ee2ca?q=60&w=640&auto=format&fit=crop"
+    },
+    "facilities": ["parking", "pool", "gym", "restaurant", "wifi"]
+  },
+  {
+    "id": 2,
+    "title": "Cozy Studio",
+    "type": "studio",
+    "rating": 4.4,
+    "reviews": 320,
+    "price": 2100,
+    "address": "Brooklyn, New York",
+    "beds": 1,
+    "bath": 1,
+    "sqft": 850,
+    "overview": "Minimal cozy studio perfect for young professionals.",
+    "image": "https://images.unsplash.com/photo-1605146768851-eda79da39897?q=60&w=640&auto=format&fit=crop",
+    "gallery": [
+      "https://images.unsplash.com/photo-1600435335786-d74d2bb6de37?q=60&w=640&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1560448204-603b3fc33ddc?q=60&w=640&auto=format&fit=crop"
+    ],
+    "agent": {
+      "name": "Robert Taylor",
+      "role": "Agent",
+      "avatar": "https://images.unsplash.com/photo-1544723495-432537d12f6c?q=60&w=640&auto=format&fit=crop"
+    },
+    "facilities": ["wifi", "gym", "parking"]
+  },
+  {
+    "id": 3,
+    "title": "Luxury Villa",
+    "type": "villa",
+    "rating": 4.9,
+    "reviews": 520,
+    "price": 5200,
+    "address": "Manhattan, New York",
+    "beds": 5,
+    "bath": 4,
+    "sqft": 3400,
+    "overview": "Luxury villa with private garden and pool.",
+    "image": "https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=60&w=640&auto=format&fit=crop",
+    "gallery": [
+      "https://images.unsplash.com/photo-1604328702728-d26d2062c20b?q=60&w=640&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1621293954908-907159247fc8?q=60&w=640&auto=format&fit=crop"
+    ],
+    "agent": {
+      "name": "Emily Johnson",
+      "role": "Broker",
+      "avatar": "https://images.unsplash.com/photo-1534308143481-c55f00be8bd7?q=60&w=640&auto=format&fit=crop"
+    },
+    "facilities": ["pool", "parking", "wifi", "gym"]
+  }
+]
