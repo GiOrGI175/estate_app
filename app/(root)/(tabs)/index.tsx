@@ -2,19 +2,41 @@ import Card from '@/components/Card';
 import FeaturedCards from '@/components/FeaturedCards';
 import Filters from '@/components/Filters';
 import Search from '@/components/Search';
+import { fetchApartaments, fetchFeatured } from '@/constants/api';
 import icons from '@/constants/icons';
 import images from '@/constants/images';
+import useFetch from '@/service/useFetch';
+import { useLocalSearchParams } from 'expo-router';
 import { FlatList, Image, Text, TouchableOpacity, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function Index() {
+  const {
+    data: Apartaments,
+    loading: ApartamentsLoading,
+    error: ApartamentsError,
+  } = useFetch(() => fetchApartaments());
+
+  const {
+    data: Featured,
+    loading: FeaturedLoading,
+    error: FeaturedError,
+  } = useFetch(() => fetchFeatured());
+
+  const params = useLocalSearchParams<{ filter?: string }>();
+
+  const filteredApartments =
+    params.filter && params.filter !== 'All'
+      ? Apartaments?.filter((item) => item.type === params.filter)
+      : Apartaments;
+
   return (
     <SafeAreaView className='bg-white h-full'>
       <FlatList
-        data={[1, 2, 3, 4, 5, 6]}
+        data={filteredApartments}
         numColumns={2}
-        renderItem={({ item }) => <Card />}
-        keyExtractor={(item) => item.toString()}
+        renderItem={({ item }) => <Card item={item} />}
+        keyExtractor={(item) => item.id.toString()}
         contentContainerClassName='pb-32'
         columnWrapperClassName='flex gap-5 px-5'
         showsVerticalScrollIndicator={false}
@@ -52,20 +74,14 @@ export default function Index() {
               </View>
 
               <FlatList
-                data={[1, 2, 3]}
-                renderItem={({ item }) => <FeaturedCards />}
-                keyExtractor={(item) => item.toString()}
+                data={Featured}
+                renderItem={({ item }) => <FeaturedCards item={item} />}
+                keyExtractor={(item) => item.id.toString()}
                 horizontal
                 showsHorizontalScrollIndicator={false}
                 bounces={false}
                 contentContainerClassName='flex gap-5 mt-5'
               />
-
-              {/* <View className='flex flex-row gap-5 mt-5'>
-                <FeaturedCards />
-                <FeaturedCards />
-                <FeaturedCards />
-              </View> */}
             </View>
 
             <View className='flex flex-row items-center justify-between'>
