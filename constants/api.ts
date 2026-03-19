@@ -9,3 +9,8 @@ export const fetchApartaments = async () => {
 export const fetchFeatured = async () => {
   return featuredDB;
 };
+
+export const fetchApartamentId = async (id: number) => {
+  const apartment = db.find((item) => item.id === id);
+  return apartment ?? null;
+};
